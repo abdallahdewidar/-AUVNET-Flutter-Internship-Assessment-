@@ -167,9 +167,9 @@ class HomePageBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _RestaurantAvatar(name: 'Alo Beirut', image:  SvgPicture.asset("asstes/images/ic_baseline-star.svg"),),
-                _RestaurantAvatar(name: 'Laffah', image: SvgPicture.asset()),
-                 _RestaurantAvatar(name: 'FALAFEL Al Rabeh', image:SvgPicture.asset() ),
-                 _RestaurantAvatar(name: 'Barbar', image:SvgPicture.asset() ),
+                _RestaurantAvatar(name: 'Laffah', image: SvgPicture.asset("asstes/images/logo637749035515703697 1.svg")),
+                 _RestaurantAvatar(name: 'FALAFEL Al Rabeh', image:SvgPicture.asset("asstes/images/LOGO(4)_637357125093900864 1.svg") ),
+                 _RestaurantAvatar(name: 'Barbar', image:SvgPicture.asset("asstes/images/Group 15.svg") ),
               ]
             ),
           ],
