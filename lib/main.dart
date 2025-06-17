@@ -14,8 +14,8 @@ void main() async {
 
   // Initialize Supabase
   await Supabase.initialize(
-    url: 'https://nzufhohdmwjpwwfxnfxs.supabase.co',       // Replace with your Supabase project URL
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56dWZob2hkbXdqcHd3ZnhuZnhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAwNzQzNDAsImV4cCI6MjA2NTY1MDM0MH0.oSSYbtJ7ReL4gA9AVNKPVs8lQgFr1Sd8gFZWbAt4i9U',                         // Replace with your Supabase anon/public key
+    url: 'https://nzufhohdmwjpwwfxnfxs.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im56dWZob2hkbXdqcHd3ZnhuZnhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAwNzQzNDAsImV4cCI6MjA2NTY1MDM0MH0.oSSYbtJ7ReL4gA9AVNKPVs8lQgFr1Sd8gFZWbAt4i9U',
   );
 
   runApp(const NawelApp());
