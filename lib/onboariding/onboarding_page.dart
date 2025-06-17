@@ -69,7 +69,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 48),
                       backgroundColor: Colors.deepPurple),
-                  child: Text(
+                  child: Text( style: TextStyle(color: Color(0xffFFFFFF)),
                     _currentIndex == onboardingData.length - 1
                         ? "Get Started"
                         : "Next",

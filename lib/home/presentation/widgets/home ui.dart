@@ -138,12 +138,12 @@ class HomePageBody extends StatelessWidget {
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                _ShortcutItem(label: 'Past Orders'),
-                _ShortcutItem(label: 'Super Saver'),
-                _ShortcutItem(label: 'Must-tries'),
-                _ShortcutItem(label: 'Give Back'),
-                _ShortcutItem(label: 'Best Seller'),
+              children: [
+                _ShortcutItem(label: 'Past Orders', icon: SvgPicture.asset("asstes/images/icon-park-solid_transaction-order.svg"), ),
+                 _ShortcutItem(label: 'Super Saver', icon: SvgPicture.asset("asstes/images/Security Vault.svg"), ),
+                 _ShortcutItem(label: 'Must-tries', icon: SvgPicture.asset("asstes/images/n.svg"), ),
+                 _ShortcutItem(label: 'Give Back', icon: SvgPicture.asset("asstes/images/Group 9.svg"),),
+                 _ShortcutItem(label: 'Best Seller', icon: SvgPicture.asset("asstes/images/ic_baseline-star.svg"), ),
               ],
             ),
             const SizedBox(height: 16),
@@ -165,12 +165,12 @@ class HomePageBody extends StatelessWidget {
             const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                _RestaurantAvatar(name: 'Alo Beirut'),
-                _RestaurantAvatar(name: 'Laffah'),
-                _RestaurantAvatar(name: 'FALAFEL Al Rabeh'),
-                _RestaurantAvatar(name: 'Barbar'),
-              ],
+              children: [
+                _RestaurantAvatar(name: 'Alo Beirut', image:  SvgPicture.asset("asstes/images/ic_baseline-star.svg"),),
+                _RestaurantAvatar(name: 'Laffah', image: SvgPicture.asset()),
+                 _RestaurantAvatar(name: 'FALAFEL Al Rabeh', image:SvgPicture.asset() ),
+                 _RestaurantAvatar(name: 'Barbar', image:SvgPicture.asset() ),
+              ]
             ),
           ],
         ),
@@ -221,7 +221,8 @@ class _ServiceCard extends StatelessWidget {
 
 class _ShortcutItem extends StatelessWidget {
   final String label;
-  const _ShortcutItem({required this.label});
+  final SvgPicture icon ;
+  const _ShortcutItem({required this.label, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -234,7 +235,7 @@ class _ShortcutItem extends StatelessWidget {
             color: Colors.deepPurple[50],
             borderRadius: BorderRadius.circular(12),
           ),
-          child: const Icon(Icons.star, color: Colors.deepPurple),
+
         ),
         const SizedBox(height: 4),
         Text(label, style: const TextStyle(fontSize: 12)),
@@ -265,15 +266,15 @@ class _BannerItem extends StatelessWidget {
 
 class _RestaurantAvatar extends StatelessWidget {
   final String name;
-  const _RestaurantAvatar({required this.name});
+  final SvgPicture image;
+  const _RestaurantAvatar({required this.name, required this.image});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         const CircleAvatar(
-          backgroundImage: NetworkImage('https://via.placeholder.com/60'),
-          radius: 24,
+
         ),
         const SizedBox(height: 4),
         Text(name, style: const TextStyle(fontSize: 12)),
