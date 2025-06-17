@@ -109,9 +109,10 @@ class HomePageBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _ServiceCard(title: 'Food', badge: 'Up to 50%'),
-                _ServiceCard(title: 'Health & wellness', badge: '20% Off'),
-                _ServiceCard(title: 'Groceries'),
+                _ServiceCard(title: 'Food', badge: 'Up to 50%', image: SvgPicture.asset("asstes/images/13 1.svg"
+                    ""),),
+                _ServiceCard(title: 'Health & wellness', badge: '20% Off', image: SvgPicture.asset("asstes/images/6.svg"),),
+                _ServiceCard(title: 'Groceries', image: SvgPicture.asset("asstes/images/vector-a-set-of-medicine-and-prescription-removebg-preview-2048x1773 1.svg"),),
               ],
             ),
             const SizedBox(height: 16),
@@ -182,7 +183,8 @@ class HomePageBody extends StatelessWidget {
 class _ServiceCard extends StatelessWidget {
   final String title;
   final String? badge;
-  const _ServiceCard({required this.title, this.badge});
+  final SvgPicture image;
+  const _ServiceCard({required this.title, this.badge, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -198,8 +200,8 @@ class _ServiceCard extends StatelessWidget {
                 color: Colors.deepPurple[50],
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: SvgPicture.asset("asstes/images/Group 76.svg")
-                  ,
+
+
             ),
             if (badge != null)
               Container(
